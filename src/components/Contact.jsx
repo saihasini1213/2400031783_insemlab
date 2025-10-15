@@ -1,4 +1,10 @@
+import React from "react";
 function Contact() {
-  return <h1>Contact Page</h1>;
+  return (
+    <div>
+      <h2>Contact</h2>
+      <p>Contact us at info@example.com.</p>
+    </div>
+  );
 }
 export default Contact;
