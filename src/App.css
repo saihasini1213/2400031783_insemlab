@@ -1,42 +1,63 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html, body, #root, .app-center-container {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f4fb;
+}
+
+.app-center-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: #212e42;
+  padding: 18px 0;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  margin-bottom: 0; /* No gap below navbar */
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar li a {
+  color: #eaf1fb;
+  background: none;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar li a.active, .navbar li a:hover {
+  background: #4971fa;
+  color: #fff;
+}
+
+.centered-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* aligns to top, just under navbar */
+  margin: 0;
+  padding-top: 0;           /* absolutely no gap */
+}
+
+.page-content {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 24px rgba(44,62,80,0.07);
+  padding: 48px 40px;
+  min-width: 370px;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
