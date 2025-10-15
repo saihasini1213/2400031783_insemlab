@@ -1,5 +1,10 @@
+import React from "react";
 function Courses() {
-  return <h1>Courses Page</h1>;
+  return (
+    <div>
+      <h2>Courses</h2>
+      <p>Browse all the courses here.</p>
+    </div>
+  );
 }
 export default Courses;
-
